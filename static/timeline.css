@@ -5,14 +5,14 @@ body {
     font-weight: 700; /* Жирное начертание шрифта */
     overflow-x: hidden; /* Prevent horizontal scrolling */
     transition: background-color 0.3s ease;
-    background: url("https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/w-qjCHPZbeXCQ-unsplash.jpg") no-repeat center center fixed;
+    background: url("/static/figures/background.jpeg") no-repeat center center fixed;
     background-size: cover; /* Cover the entire viewport */
     height: 100vh; /* Full viewport height */
     width: 100vw; /* Ограничиваем ширину экрана */
 }
 
 .dimmed {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/w-qjCHPZbeXCQ-unsplash.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/figures/background.jpeg");
     transition: background-color 0.3s ease;
     pointer-events: none; /* Модальные окна не блокируют события */
 }

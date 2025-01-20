@@ -71,10 +71,10 @@ timelineItems.forEach((item, index) => {
             let modal;
             if (/\.(jpg|jpeg|png|gif|webp)$/i.test(item.src))  {
                 modal = document.createElement('img');
-                modal.src = item.src;
+                modal.src = `/cached/${item.src.trim().replace('static/', '')}`;
             } else {
                 modal = document.createElement('video');
-                modal.src = item.src;
+                modal.src = `/cached/${item.src.trim().replace('static/', '')}`;
                 modal.autoplay = true;
                 modal.muted = item.muted;
                 modal.loop = true;
