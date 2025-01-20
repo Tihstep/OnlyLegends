@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Friendship Timeline</title>
+    <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+    <div id="intro-modal" class="modal-container">
+        <div class="modal-content">
+            <h1>Добро пожаловать!</h1>
+            <h3>Этот сайт - история Гейского Гея в виде интерактивной временной шкалы. Вот пример, как это работает:</h3>
+            <div class="demo-container">
+                <div class="demo-timeline">
+                    <div class="demo-item"
+                        data-images="static/figures/prehistoric/1.png, static/figures/prehistoric/2.png, static/figures/prehistoric/3.png, static/figures/prehistoric/4.png, static/figures/prehistoric/5.png, static/figures/prehistoric/6.png, static/figures/prehistoric/7.png, static/figures/prehistoric/8.png, static/figures/prehistoric/9.png,  static/figures/prehistoric/10.png">
+                        <div class="demo-point"></div>
+                    </div>
+                    <div class="demo-item"
+                        data-images="static/figures/ancient/1.png, static/figures/ancient/2.png, static/figures/ancient/3.png, static/figures/ancient/4.png, static/figures/ancient/5.png, static/figures/ancient/6.png, static/figures/ancient/7.png, static/figures/ancient/8.png, static/figures/ancient/9.png,  static/figures/ancient/10.png,  static/figures/ancient/11.png">
+                        <div class="demo-point"></div>
+                    </div>
+                    <div class="demo-item"
+                        data-images="static/figures/middle/1.png, static/figures/middle/2.png, static/figures/middle/3.png, static/figures/middle/4.png, static/figures/middle/5.png, static/figures/middle/6.png, static/figures/middle/7.png, static/figures/middle/8.png, static/figures/middle/9.png,  static/figures/middle/10.png,  static/figures/middle/11.png,  static/figures/middle/12.png">
+                        <div class="demo-point"></div>
+                    </div>
+                    <div class="demo-item"
+                        data-images="static/figures/newest/1.png, static/figures/newest/2.png, static/figures/newest/3.png, static/figures/newest/4.png, static/figures/newest/5.png, static/figures/newest/6.png, static/figures/newest/7.png, static/figures/newest/8.png, static/figures/newest/9.png,  static/figures/newest/10.png,  static/figures/newest/11.png">
+                        <div class="demo-point"></div>
+                    </div>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="static/figures/neanderthal.png" alt="neanderthal" class="neanderthal" id="neanderthal">
+            <img src="static/figures/astronaut.png" alt="astronaut" class="astronaut" id="astronaut">
+        </div>
+        <div class="arrow-box">
+            <img src="static/figures/arrow.png" alt="arrow" class="arrow" id="arrow">
+        </div>
+        <div class="instruction">
+            <div class="instruction-item">
+                <div class="instruction-text">Наведи — <span>разблокируй воспоминание!</span></div>
+            </div>
+            <div class="instruction-item">
+                <div class="instruction-text">Кликни — <span>дай себе время порадоваться!</span></div>
+            </div>
+            <div class="instruction-item">
+                <div class="instruction-text">Нажми пробел — <span>включи звук настройки видео!</span></div>
+            </div>
+        </div>
+        <button id="close-modal">Начать</button>
+    </div>
+</div>
+
+    <img src="static/figures/jvcr.png" alt="jvcr" class="jvcr" id="jvcr">
+    <img src="static/figures/msk.png" alt="msk" class="msk" id="msk">
+    <div class="steps">
+        <img src="static/figures/left-foot-stepa.png" alt="leftFoot-stepa" class="foot" id="leftFoot0">
+        <img src="static/figures/right-foot-stepa.png" alt="rightFoot-stepa" class="foot" id="rightFoot0">
+        <img src="static/figures/left-foot-nat.png" alt="leftFoot-natasha" class="foot" id="leftFoot1">
+        <img src="static/figures/right-foot-nat.png" alt="rightFoot-natasha" class="foot" id="rightFoot1">
+        <img src="static/figures/left-foot-nastya.png" alt="leftFoot-nastya" class="foot" id="leftFoot2">
+        <img src="static/figures/right-foot-nastya.png" alt="rightFoot-nastya" class="foot" id="rightFoot2">
+        <img src="static/figures/left-foot-danya.png" alt="leftFoot-lera" class="foot" id="leftFoot3">
+        <img src="static/figures/right-foot-danya.png" alt="leftFoot-lera" class="foot" id="rightFoot3">
+        <img src="static/figures/left-foot-lera.png" alt="leftFoot-danya" class="foot" id="leftFoot4">
+        <img src="static/figures/right-foot-lera.png" alt="rightFoot-danya" class="foot" id="rightFoot4">
+        <img src="static/figures/left-foot-masha.png" alt="leftFoot-masha" class="foot" id="leftFoot5">
+        <img src="static/figures/right-foot-masha.png" alt="rightFoot-masha" class="foot" id="rightFoot5">
+        <img src="static/figures/left-foot-dana.png" alt="leftFoot-dana" class="foot" id="leftFoot6">
+        <img src="static/figures/right-foot-dana.png" alt="rightFoot-dana" class="foot" id="rightFoot6">
+        <img src="static/figures/left-foot-mashak.png" alt="leftFoot-mashak" class="foot" id="leftFoot7">
+        <img src="static/figures/right-foot-mashak.png" alt="rightFoot-mashak" class="foot" id="rightFoot7">
+        <img src="static/figures/right-foot-nastya.png" alt="leftFoot-nastya" class="foot" id="leftFoot8">
+        <img src="static/figures/left-foot-nastya.png" alt="rightFoot-nastya" class="foot" id="rightFoot8">
+        <img src="static/figures/left-foot-danya.png" alt="leftFoot-lera" class="foot" id="leftFoot9">
+        <img src="static/figures/right-foot-danya.png" alt="leftFoot-lera" class="foot" id="rightFoot9">
+    </div>
+    <div id="tracks"></div>
+    <div class="timeline">
+        <img src="static/figures/notebook.png" alt="notebook" class="icon" id="notebook.png">
+        <div class="timeline-item"
+            data-title="Эйфория🦹‍♀️💅"
+            data-images="
+            static/200918/1.webp,
+            static/200918/2.webp,
+            static/200918/3.webp,
+            static/200918/4.webp,
+            static/200918/5.webp,
+            static/200918/6.webp,
+            static/200918/7.webp, 
+            static/200918/8.webp,
+            static/200918/9.webp,
+            static/200918/10.webp,
+            static/200918/11.jpg"
+            data-videos='[
+               {"src": "static/200918/1.MOV", "muted": true},
+               {"src": "static/200918/2.mp4", "muted": false}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/2021.png" alt="2021" class="year" id="2021">
+        <div class="timeline-item"
+            data-title="День рождения любимки🤩"
+            data-images="static/210913/1.jpeg"
+            data-videos='[
+               {"src": "static/210913/1.mp4", "muted": true},
+               {"src": "static/210913/2.mp4", "muted": false},
+               {"src": "static/210913/3.mp4", "muted": false}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/fireworks.png" alt="fireworks" class="icon" id="fireworks">
+        <div class="timeline-item"
+            data-title="Тут мог бы быть НГ, но маша заблевала все материалы..."
+            data-images="static/220101/1.webp, static/220101/2.jpeg"
+            data-videos=''>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/2022.png" alt="2022" class="year" id="2022">
+        <img src="static/figures/santa-claus.png" alt="santa-claus" class="icon-intercept" id="santa-claus">
+        <div class="timeline-item"
+            data-title="Любими приехали в шерегеш🥳"
+            data-images="
+            static/220126-220129/1.webp,
+            static/220126-220129/2.webp, 
+            static/220126-220129/3.webp,
+            static/220126-220129/4.jpeg,
+            static/220126-220129/5.webp,
+            static/220126-220129/6.jpeg,
+            static/220126-220129/7.webp,
+            static/220126-220129/8.webp,
+            static/220126-220129/9.jpeg"
+            data-videos=''>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/toy-train.png" alt="train" class="icon" id="train">
+        <div class="timeline-item"
+            data-title="Катка🏂"
+            data-images="
+            static/220129-220203/1.jpeg,
+            static/220129-220203/2.jpeg, 
+            static/220129-220203/3.jpeg,
+            static/220129-220203/4.webp,
+            static/220129-220203/5.webp,
+            static/220129-220203/6.webp,
+            static/220129-220203/7.webp,
+            static/220129-220203/8.webp"
+            data-videos='[
+               {"src": "static/220129-220203/1.mp4", "muted": false},
+               {"src": "static/220129-220203/2.mp4", "muted": false},
+               {"src": "static/220129-220203/3.mp4", "muted": false}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/skiing.png" alt="skiing" class="icon" id="skiing">
+        <div class="timeline-item"
+            data-title="Город засыпает, просыпается мафия🧌🍻"
+            data-images="
+            static/220204/1.webp,
+            static/220204/2.webp,
+            static/220204/3.webp,
+            static/220204/4.webp"
+            data-videos='[
+               {"src": "static/220204/1.mp4", "muted": true},
+               {"src": "static/220204/2.mp4", "muted": true},
+               {"src": "static/220204/3.mp4", "muted": true},
+               {"src": "static/220204/4.mp4", "muted": true},
+               {"src": "static/220204/5.mp4", "muted": false},
+               {"src": "static/220204/6.mp4", "muted": true},
+               {"src": "static/220204/7.mp4", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+            <img src="static/figures/snowboard.png" alt="snowboard" class="snowboard" id="snowboard">  
+        <img src="static/figures/dance.png" alt="dance" class="dance" id="dance">
+        <div class="timeline-item"
+            data-title="Любими уже уезжают😿"
+            data-images="
+            static/220205/1.webp,
+            static/220205/2.webp, 
+            static/220205/3.webp,
+            static/220205/4.webp,
+            static/220205/5.webp,
+            static/220205/6.webp,
+            static/220205/7.webp,
+            static/220205/8.webp,
+            static/220205/9.webp,
+            static/220205/10.webp"
+            data-videos=''>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/baby.png" alt="baby" class="icon" id="baby">
+        <img src="static/figures/river.png" alt="river" class="river" id="river">
+        <div class="timeline-item"
+            data-title="Крепи союз армии и флота!"
+            data-images="
+            static/220212/1.webp,
+            static/220212/2.webp,
+            static/220212/3.webp,
+            static/220212/4.webp,
+            static/220212/5.webp,
+            static/220212/6.webp,
+            static/220212/7.jpeg,
+            static/220212/8.webp,
+            static/220212/9.webp,
+            static/220212/10.webp,
+            static/220212/11.webp"
+            data-videos='[
+               {"src": "static/220212/1.mp4", "muted": true},
+               {"src": "static/220212/2.mp4", "muted": false},
+               {"src": "static/220212/3.mp4", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/peace-symbol.png" alt="peace-symbol" class="icon" id="peace-symbol">        
+        <div class="timeline-item"
+            data-title="Пленочка📸"
+            data-images="
+            static/220311/1.jpeg,
+            static/220311/2.webp,
+            static/220311/3.webp,
+            static/220311/4.webp,
+            static/220311/5.jpeg,
+            static/220311/6.webp,
+            static/220311/7.webp,
+            static/220311/8.webp,
+            static/220311/9.webp,
+            static/220311/10.webp,
+            static/220311/11.webp"
+            data-videos=''>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/camera.png" alt="camera" class="icon" id="camera">
+        <div class="timeline-item"
+            data-title="Туся легенда!💃"
+            data-images="
+            static/220911/1.webp,
+            static/220911/2.webp,
+            static/220911/3.webp,
+            static/220911/4.webp,
+            static/220911/5.webp,
+            static/220911/6.webp"
+            data-videos='[
+               {"src": "static/220911/1.mp4", "muted": false},
+               {"src": "static/220911/2.mp4", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/girl.png" alt="girl" class="icon" id="girl">
+        <div class="timeline-item"
+            data-title="Это мой самый лучший день!🤯🖤"
+            data-images="
+            static/220912/1.webp,
+            static/220912/2.webp,
+            static/220912/3.jpeg,
+            static/220912/4.jpeg,
+            static/220912/5.webp,
+            static/220912/6.webp,
+            static/220912/7.webp,
+            static/220912/8.webp,
+            static/220912/9.jpeg"
+            data-videos='[
+               {"src": "static/220912/1.mp4", "muted": false},
+               {"src": "static/220912/2.mp4", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/police-car.png" alt="police-car" class="police-car" id="police-car">
+        <img src="static/figures/wheels.png" alt="wheels" class="wheels" id="wheels">
+        <img src="static/figures/policeman.png" alt="policeman" class="icon" id="policeman">
+        <div class="timeline-item"
+            data-title="Ну.. бухают опять, без комментариев."
+            data-images="
+            static/221001/1.webp,
+            static/221001/2.webp,
+            static/221001/3.webp,
+            static/221001/4.webp,
+            static/221001/5.jpeg,
+            static/221001/6.webp"
+            data-videos='[
+               {"src": "static/221001/1.mp4", "muted": false},
+               {"src": "static/221001/2.mp4", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/alcoholism.png" alt="alcoholism" class="icon" id="alcoholism">
+        <div class="timeline-item"
+            data-title="В главных ролях: конченый идиот,.."
+            data-images="
+            static/221019/1.webp,
+            static/221019/2.webp,
+            static/221019/3.webp,
+            static/221019/4.webp,
+            static/221019/5.webp,
+            static/221019/6.webp"
+            data-videos=''>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/assessment.png" alt="assessment" class="icon" id="assessment">
+        <div class="timeline-item"
+            data-title="Посекретничали🤫"
+            data-images="
+            static/221023/1.webp,
+            static/221023/2.webp,
+            static/221023/3.webp,
+            static/221023/4.webp,
+            static/221023/5.webp,
+            static/221023/6.webp,
+            static/221023/7.webp,
+            static/221023/8.webp,
+            static/221023/9.webp"
+            data-videos='[
+               {"src": "static/221023/1.mp4", "muted": true},
+               {"src": "static/221023/2.mp4", "muted": false}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/silence.png" alt="silence" class="icon" id="silence">
+        <div class="timeline-item"
+            data-title="Хэллоуин🎃"
+            data-images="
+            static/221029/1.jpeg,
+            static/221029/2.webp,
+            static/221029/3.jpeg,
+            static/221029/4.jpeg,
+            static/221029/5.webp"
+            data-videos='[
+               {"src": "static/221029/1.mp4", "muted": true},
+               {"src": "static/221029/2.mp4", "muted": false},
+               {"src": "static/221029/3.mp4", "muted": true},
+               {"src": "static/221029/4.mp4", "muted": true},
+               {"src": "static/221029/5.mp4", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/peace.png" alt="peace" class="peace" id="peace">
+        <img src="static/figures/clown.png" alt="clown" class="halloween" id="clown">
+        <div class="timeline-item"
+            data-title="Вайбики"
+            data-images="
+            static/221124/1.webp,
+            static/221124/2.webp,
+            static/221124/3.webp,
+            static/221124/4.webp,
+            static/221124/5.webp,
+            static/221124/6.webp,
+            static/221124/7.webp,
+            static/221124/8.webp,
+            static/221124/9.webp,
+            static/221124/10.webp"
+            data-videos='[
+               {"src": "static/221124/1.mp4", "muted": false}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/house.png" alt="house" class="icon" id="house">
+        <div class="timeline-item"
+            data-title="Блять.. я не могу🧟‍♂️"
+            data-images="
+            static/221203/1.jpeg,
+            static/221203/2.jpeg,
+            static/221203/3.webp,
+            static/221203/4.webp,
+            static/221203/5.jpeg"
+            data-videos='[
+               {"src": "static/221203/1.mp4", "muted": true},
+               {"src": "static/221203/2.mp4", "muted": false},
+               {"src": "static/221203/3.MOV", "muted": true},
+               {"src": "static/221203/4.mp4", "muted": true},
+               {"src": "static/221203/5.mp4", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/beer.png" alt="beer" class="icon" id="beer">
+        <img src="static/figures/jvcr-2.png" alt="jvcr" class="jvcr" id="departure">
+        <div class="timeline-item"
+            data-title="ДР Ксю💓"
+            data-images=""
+            data-videos='[
+               {"src": "static/221225/1.mp4", "muted": true},
+               {"src": "static/221225/2.mp4", "muted": true},
+               {"src": "static/221225/3.mp4", "muted": true},
+               {"src": "static/221225/4.mp4", "muted": false}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/2023.png" alt="2023" class="year" id="2023">
+        <img src="static/figures/spotlight.png" alt="spotlight" class="icon-intercept" id="spotlight">
+        <div class="timeline-item"
+            data-title="Не очко обычно губит, а к одиннадцати - туз"
+            data-images="
+            static/230205/1.webp,
+            static/230205/2.webp,
+            static/230205/3.webp"
+            data-videos='[
+               {"src": "static/230205/1.mp4", "muted": true},
+               {"src": "static/230205/2.mp4", "muted": true},
+               {"src": "static/230205/3.mp4", "muted": true},
+               {"src": "static/230205/4.mp4", "muted": false}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/singing.png" alt="singing" class="icon" id="singing">
+        <div class="timeline-item"
+            data-title="Половые праздники♥️"
+            data-images="
+            static/230308/1.webp,
+            static/230308/2.webp,
+            static/230308/3.jpeg,
+            static/230308/4.webp,
+            static/230308/5.jpeg,
+            static/230308/6.jpeg,
+            static/230308/7.webp,
+            static/230308/8.jpeg"
+            data-videos='[
+               {"src": "static/230308/1.MOV", "muted": false}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/empowerment.png" alt="empowerment" class="empowerment" id="empowerment">
+        <img src="static/figures/equality.png" alt="equality" class="icon" id="equality">
+        <div class="timeline-item"
+            data-title="Питер - мейнстрим🚢🌇"
+            data-images="
+            static/230323/1.webp,
+            static/230323/2.webp,
+            static/230323/3.webp,
+            static/230323/4.webp,
+            static/230323/5.webp,
+            static/230323/6.webp,
+            static/230323/7.webp,
+            static/230323/8.webp,
+            static/230323/9.webp,
+            static/230323/10.webp,
+            static/230323/11.webp,
+            static/230323/12.webp,
+            static/230323/13.webp"
+            data-videos='[
+               {"src": "static/230323/1.mp4", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/bridge.png" alt="bridge" class="icon" id="bar">
+        <div class="timeline-item"
+            data-title="Питер - андеграунд👩‍🎤🌃"
+            data-images="
+            static/230324/1.webp,
+            static/230324/2.webp,
+            static/230324/3.webp,
+            static/230324/4.webp,
+            static/230324/5.webp,
+            static/230324/6.webp,
+            static/230324/7.webp,
+            static/230324/8.webp,
+            static/230324/9.webp,
+            static/230324/10.webp"
+            data-videos='[
+               {"src": "static/230324/1.mp4", "muted": false},
+               {"src": "static/230324/2.mp4", "muted": true},
+               {"src": "static/230324/3.mp4", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/guys.png" alt="guys" class="guys" id="guys">
+        <img src="static/figures/bar-counter.png" alt="bar-counter" class="guys-intercept" id="bar-counter">
+        <div class="timeline-item"
+            data-title="Если вы на этом моменте не разу не плакали, у вас не сердца!"
+            data-images="
+            static/230701/1.webp,
+            static/230701/2.webp,
+            static/230701/3.webp,
+            static/230701/4.webp,
+            static/230701/5.webp,
+            static/230701/6.webp,
+            static/230701/7.webp,
+            static/230701/8.webp"
+            data-videos='[
+               {"src": "static/230701/1.mp4", "muted": true},
+               {"src": "static/230701/2.mp4", "muted": false},
+               {"src": "static/230701/3.mp4", "muted": true},
+               {"src": "static/230701/4.mp4", "muted": true},
+               {"src": "static/230701/5.mp4", "muted": true},
+               {"src": "static/230701/6.mp4", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/summer.png" alt="summer" class="guys-intercept" id="summer">
+        <div class="timeline-item"
+            data-title="Еще не соскуфились!"
+            data-images="
+            static/230801/1.webp,
+            static/230801/2.webp,
+            static/230801/3.webp,
+            static/230801/4.webp"
+            data-videos='[
+               {"src": "static/230801/1.MOV", "muted": false},
+               {"src": "static/230801/2.MOV", "muted": true},
+               {"src": "static/230801/3.MOV", "muted": true},
+               {"src": "static/230801/4.MOV", "muted": true},
+               {"src": "static/230801/5.MOV", "muted": true},
+               {"src": "static/230801/6.MOV", "muted": false}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/man.png" alt="man" class="guys-intercept" id="man">
+        <div class="timeline-item"
+            data-title="Он жив!"
+            data-videos='[
+               {"src": "static/230901/1.mp4", "muted": true},
+               {"src": "static/230901/2.MOV", "muted": true},
+               {"src": "static/230901/3.MOV", "muted": false},
+               {"src": "static/230901/4.MOV", "muted": true},
+               {"src": "static/230901/5.MOV", "muted": true},
+               {"src": "static/230901/6.MOV", "muted": true},
+               {"src": "static/230901/7.mp4", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/disco-ball.png" alt="disco-ball" class="icon" id="disco-ball">
+        <div class="timeline-item"
+            data-title="Выехали в Монако🇲🇨"
+            data-images="
+            static/231014/1.webp,
+            static/231014/2.webp,
+            static/231014/3.webp,
+            static/231014/4.webp,
+            static/231014/5.webp,
+            static/231014/6.jpeg,
+            static/231014/7.jpeg"
+            data-videos='[
+               {"src": "static/231014/1.MOV", "muted": true},
+               {"src": "static/231014/2.MOV", "muted": false}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/casino-chip.png" alt="casino-chip" class="icon" id="casino-chip">
+        <img src="static/figures/rich.png" alt="rich" class="rich" id="rich">
+        <div class="timeline-item"
+            data-title="Даночка с днем рождения!🎁"
+            data-images="
+            static/231025/1.webp,
+            static/231025/2.webp,
+            static/231025/3.jpeg,
+            static/231025/4.webp,
+            static/231025/5.jpeg"
+            data-videos='[
+               {"src": "static/231025/1.mp4", "muted": true},
+               {"src": "static/231025/2.mp4", "muted": true},
+               {"src": "static/231025/3.mp4", "muted": false}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/love-2.png" alt="love-2" class="icon" id="love-2">
+        <div class="timeline-item"
+            data-title="Нарочно падали звезды!💫"
+            data-images="
+            static/231030/1.webp,
+            static/231030/2.webp"
+            data-videos='[
+               {"src": "static/231030/1.mp4", "muted": false},
+               {"src": "static/231030/2.MOV", "muted": true},
+               {"src": "static/231030/3.MOV", "muted": true},
+               {"src": "static/231030/4.MOV", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/2024.png" alt="2024" class="year" id="2024">
+        <img src="static/figures/falling-star.png" alt="falling-star" class="icon-intercept" id="falling-star">
+        <div class="timeline-item"
+            data-title="Домашнее🧘‍♀️"
+            data-images="
+            static/240115/1.webp,
+            static/240115/2.webp,
+            static/240115/3.webp,
+            static/240115/4.webp,
+            static/240115/5.webp,
+            static/240115/6.webp,
+            static/240115/7.webp"
+            data-videos='[
+               {"src": "static/240115/1.MOV", "muted": false},
+               {"src": "static/240115/2.MOV", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/love.png" alt="love" class="icon" id="love">
+        <div class="timeline-item"
+            data-title="Стипи СТАРИК👴"
+            data-images="
+            static/240417/1.webp,
+            static/240417/2.webp,
+            static/240417/3.webp,
+            static/240417/4.webp,
+            static/240417/5.webp,
+            static/240417/6.webp,
+            static/240417/7.webp,
+            static/240417/8.webp"
+            data-videos='[
+               {"src": "static/240417/1.MOV", "muted": false},
+               {"src": "static/240417/2.MOV", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/happy-birthday-2.png" alt="happy-birthday-2" class="icon" id="happy-birthday-2">
+        <div class="timeline-item"
+            data-title="Маша пикми🦄"
+            data-images="
+            static/240501/1.webp,
+            static/240501/2.webp,
+            static/240501/3.webp,
+            static/240501/4.webp,
+            static/240501/5.webp,
+            static/240501/6.webp,
+            static/240501/7.webp,
+            static/240501/8.webp"
+            data-videos='[
+               {"src": "static/240501/1.mp4", "muted": false},
+               {"src": "static/240501/2.MOV", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/sun.png" alt="sun" class="sun" id="sun">
+        <img src="static/figures/hair-cutting.png" alt="hair-cutting" class="icon" id="hair-cutting">
+        <div class="timeline-item"
+            data-title="ДР светленькой🐱"
+            data-images="
+            static/240512/1.webp,
+            static/240512/2.webp,
+            static/240512/3.webp,
+            static/240512/4.webp,
+            static/240512/5.webp,
+            static/240512/6.webp"
+            data-videos='[
+               {"src": "static/240512/1.MOV", "muted": false},
+               {"src": "static/240512/2.MOV", "muted": true},
+               {"src": "static/240512/3.MOV", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/cake.png" alt="cake" class="icon" id="cake">
+        <div class="timeline-item"
+            data-title="ДР Фимы🐶🥂"
+            data-images="
+            static/240601/1.webp,
+            static/240601/2.webp,
+            static/240601/3.webp,
+            static/240601/4.webp,
+            static/240601/5.webp,
+            static/240601/6.webp"
+            data-videos='[
+               {"src": "static/240601/1.MOV", "muted": false},
+               {"src": "static/240601/2.MOV", "muted": false},
+               {"src": "static/240601/3.MOV", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/happy.png" alt="happy" class="happy" id="happy">
+        <img src="static/figures/happy-birthday.png" alt="happy-birthday" class="happy-b" id="happy-birthday">
+        <div class="timeline-item"
+            data-title="ДР МАШИТЫ - мейнстрим👑"
+            data-images="
+            static/240901/1.webp,
+            static/240901/2.webp,
+            static/240901/3.webp,
+            static/240901/4.webp,
+            static/240901/5.webp,
+            static/240901/6.webp,
+            static/240901/7.webp,
+            static/240901/8.webp,
+            static/240901/9.webp"
+            data-videos=''>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/gift.png" alt="gift" class="icon" id="gift">
+        <div class="timeline-item"
+            data-title="ДР МАШИТЫ - андеграунд🚬"
+            data-images="
+            static/240902/1.webp,
+            static/240902/2.webp,
+            static/240902/3.webp,
+            static/240902/4.webp,
+            static/240902/5.webp"
+            data-videos='[
+               {"src": "static/240902/1.MOV", "muted": false},
+               {"src": "static/240902/2.MOV", "muted": true},
+               {"src": "static/240902/3.MOV", "muted": true},
+               {"src": "static/240902/4.MOV", "muted": true}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/laugh.png" alt="laugh" class="icon" id="laugh">
+        <div class="timeline-item"
+            data-title="ДР Даночки v2.0💜"
+            data-images="
+            static/241001/1.webp,
+            static/241001/2.jpeg,
+            static/241001/3.webp,
+            static/241001/4.webp,
+            static/241001/5.webp,
+            static/241001/6.webp"
+            data-videos='[
+               {"src": "static/241001/1.mp4", "muted": true},
+               {"src": "static/241001/2.mp4", "muted": true},
+               {"src": "static/241001/3.mp4", "muted": true},
+               {"src": "static/241001/4.mp4", "muted": false}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/party.png" alt="party" class="icon" id="party">
+        <img src="static/figures/business.png" alt="work" class="work" id="work">
+        <div class="timeline-item"
+            data-title="Хэллоуин👻"
+            data-images="
+            static/241030/1.webp,
+            static/241030/2.webp,
+            static/241030/3.webp,
+            static/241030/4.webp,
+            static/241030/5.webp,
+            static/241030/6.webp,
+            static/241030/7.webp,
+            static/241030/8.webp,
+            static/241030/9.webp,
+            static/241030/10.webp,
+            static/241030/11.webp,
+            static/241030/12.webp,
+            static/241030/13.webp,
+            static/241030/14.webp"
+            data-videos='[
+               {"src": "static/241030/1.MOV", "muted": false}
+            ]'>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/2025.png" alt="2025" class="year" id="2025">
+        <img src="static/figures/haunted-house.png" alt="haunted-house" class="icon-intercept" id="haunted-house">
+        <div class="timeline-item"
+            data-title="Банька🥵"
+            data-images="
+            static/241201/1.webp,
+            static/241201/2.webp,
+            static/241201/3.webp,
+            static/241201/4.webp,
+            static/241201/5.webp,
+            static/241201/6.webp,
+            static/241201/7.webp"
+            data-videos=''>
+            <div class="timeline-point"></div>
+        </div>
+        <img src="static/figures/hot-tub.png" alt="hot-tub" class="icon" id="hot-tub">
+    <div class="ending">
+        <div class="end-text">
+        </div>
+    </div>
+    </div>
+<script src="static/steps.js"></script>
+<script src="static/index.js"></script>
+</div>
+</body>
+</html>

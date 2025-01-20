@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
+    font-weight: 700; /* Жирное начертание шрифта */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    transition: background-color 0.3s ease;
+    background: url("https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/w-qjCHPZbeXCQ-unsplash.jpg") no-repeat center center fixed;
+    background-size: cover; /* Cover the entire viewport */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Ограничиваем ширину экрана */
+}
+
+.dimmed {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/w-qjCHPZbeXCQ-unsplash.jpg");
+    transition: background-color 0.3s ease;
+    pointer-events: none; /* Модальные окна не блокируют события */
+}
+
+.dimmeda {
+    transition: background-color 0.3s ease;
+    pointer-events: none; /* Модальные окна не блокируют события */
+}
+
+.timeline {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 600%; /* Full height */
+    padding: 50px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: #ffffff;
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 50px 0; /* Spacing between items */
+}
+
+.timeline-point {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    border-radius: 50%;
+    border: 6px solid #A6446A;
+    cursor: pointer;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+    z-index: 1; /* Ensure above the line */
+    pointer-events: all; /* Ensure the button can still be interacted with */
+}
+
+/* Плавное увеличение */
+.timeline-point:hover {
+    transform: translate(-50%, -50%) scale(1.2); /* Плавное увеличение */
+    width: 36px;  /* Увеличиваем размер кнопки */
+    height: 36px; /* Увеличиваем размер кнопки */
+}
+
+/* Чтобы область кнопки была больше */
+.timeline-item:hover .timeline-point {
+    transform: translate(-50%, -50%) scale(1.2);
+    width: 36px;
+    height: 36px;
+}
+
+.modal {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    object-fit: auto;
+    z-index: 999;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.foot {
+  position: absolute;
+  width: 15px;
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+.steps {
+  height: 500px;
+}
+
+.year {
+    width: 80px; /* Set the width */
+    height: 80px; /* Set the height */
+    float: left;
+    margin-left: 70px;
+}
+
+.jvcr {
+    width: 120px; /* Set the width */
+    height: 120px; /* Set the height */
+    float: left;
+    margin-left: 550px;
+}
+
+.river {
+    width: 870px; /* Set the width */
+    height: 100px; /* Set the height */
+    float: right;
+    margin-right: 0px;
+}
+
+.guys {
+    width: 400px; /* Set the width */
+    height: 400px; /* Set the height */
+    float: left;
+}
+
+.guys-intercept {
+    width: 50px; /* Set the width */
+    height: 50px; /* Set the height */
+    float: left;
+    margin-left: 500px;
+}
+
+
+
+.work {
+    width: 80px; /* Set the width */
+    height: 80px; /* Set the height */
+    float: left;
+    margin-left: 550px;
+}
+
+.departure {
+    width: 120px; /* Set the width */
+    height: 120px; /* Set the height */
+    float: left;
+    margin-left: 1050px;
+}
+
+.msk {
+    width: 120px; /* Set the width */
+    height: 120px; /* Set the height */
+    float: left;
+    margin-left: 900px;
+}
+
+.empowerment {
+    width: 120px; /* Set the width */
+    height: 120px; /* Set the height */
+    float: right;
+    margin-right: 400px;
+}
+
+.rich {
+    width: 200px; /* Set the width */
+    height: 200px; /* Set the height */
+    float: right;
+    margin-right: 300px;
+}
+
+.sun {
+    width: 150px; /* Set the width */
+    height: 150px; /* Set the height */
+    float: right;
+    margin-right: 100px;
+}
+
+.dance {
+    width: 50px; /* Set the width */
+    height: 50px; /* Set the height */
+    float: left;
+    margin-left: 580px;
+}
+
+.snowboard {
+    width: 120px; /* Set the width */
+    height: 120px; /* Set the height */
+    float: left;
+    margin-left: 200px;
+}
+
+.happy {
+    width: 150px; /* Set the width */
+    height: 150px; /* Set the height */
+    float: left;
+    margin-left: 300px;
+}
+
+.happy-b {
+    width: 50px; /* Set the width */
+    height: 50px; /* Set the height */
+    float: left;
+    margin-left: 450px;
+}
+
+.peace {
+    width: 120px; /* Set the width */
+    height: 120px; /* Set the height */
+    float: left;
+    margin-left: 450px;
+}
+
+.halloween {
+    width: 50px; /* Set the width */
+    height: 50px; /* Set the height */
+    float: left;
+    margin-left: 330px;
+}
+
+
+.police-car {
+    height: 120px; /* Set the height */
+    float: right; /* This can be removed if you're using positioning */
+    margin-right: 500px;
+    z-index: 2; /* Keep the high z-index value */
+    position: relative; /* Ensure it has a position for z-index to work */
+}
+
+.wheels {
+    width: 300px; /* Set the width */
+    height: 50px; /* Set the height */
+    float: right; /* This can be removed if you're using positioning */
+    margin-right: -360px;
+    margin-top: 70px;
+    position: relative; /* Ensure it has a position for z-index to work */
+    z-index: 1; /* Lower z-index than .police-car */
+}
+
+
+.arrow {
+    width: 50px; /* Set the width */
+    height: 50px; /* Set the height */
+    float: center;
+    margin-left: -35px;
+    margin-top: -20px; /* Adjust this value as needed */
+}
+
+.neanderthal {
+    width: 50px; /* Set the width */
+    height: 50px; /* Set the height */
+    float: left;
+    margin-left: 230px;
+    margin-top: -90px; /* Adjust this value as needed */
+}
+
+.astronaut {
+    width: 50px; /* Set the width */
+    height: 50px; /* Set the height */
+    float: left;
+    margin-left: 720px;
+    margin-top: -90px; /* Adjust this value to align the neanderthal image */
+}
+
+.icons {
+    text-align: center; /* Ensures both images are centered horizontally */
+}
+
+.icon {
+    width: 50px; /* Set the width */
+    height: 50px; /* Set the height */
+    float: left;
+    margin-left: 900px;
+}
+
+.icon-intercept {
+    width: 50px; /* Set the width */
+    height: 50px; /* Set the height */
+    float: left;
+    margin-left: 750px;
+}
+
+#tracks {
+    overflow: hidden;
+}
+
+
+/* Новый стиль для текста */
+.timeline-title {
+    position: absolute;
+    top: -400px; /* Местоположение текста относительно кнопки */
+    left: 50%;
+    transform: translateX(-50%);
+	font-family: Gill Sans, Verdana;
+    background: black;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+    color: #f2f3f4;
+    padding: 5px 10px;
+    border-radius: 10px;
+    opacity: 0; /* Скрыть текст по умолчанию */
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Текст не должен блокировать другие события */
+    z-index: 10000;
+}
+
+/* Показываем текст при наведении */
+.timeline-item:hover .timeline-title {
+    opacity: 1; /* Появляется при наведении */
+}
+
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.82);
+    z-index: 10000;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-container.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal-content {
+    background: #f991b6;
+    color: black;
+    width: 60%;
+    height: 52%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal-content h1 {
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.modal-content h3 {
+    color: black;
+}
+
+.modal-content p {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.modal-content button {
+    float: left;
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 10px 460px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #8a3757;
+    transform: scale(1.05);
+}
+
+.demo-container {
+    margin: 10px auto;
+    position: relative;
+    width: 200px;
+    height: 100px;
+}
+.demo-timeline {
+    position: relative;
+    background: black;
+    top: 50%;
+    left: 0%;
+    width: 200%;
+    height: 4px;
+    margin: 0px -120px;
+}
+.demo-item {
+    position: absolute;
+    top: -12px;
+}
+
+.demo-point {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 6px solid #A6446A;
+    pointer-events: all; /* Ensure the button can still be interacted with */
+}
+.demo-point:hover {
+    transform: scale(1.3);
+}
+
+.demo-modal {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 1.0);
+    z-index: 10000;
+    transition: opacity 0.3s ease;
+}
+.demo-modal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+strong{
+    font-family: 'Times New Roman', sans-serif; /* Используем шрифт Roboto */
+}
+
+.instruction {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0; /* Центрируем блок по горизонтали */
+    padding: 5px 0px 10px 10px;
+    text-align: justify;
+    width: 1000px; /* Занимаем всю ширину родительского контейнера */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.instruction-item {
+    max-width: 200px; /* Лимит максимальной ширины */
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #A6446A;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instruction-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.instruction-item p {
+    font-size: 1rem;
+    color: #444;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.instruction-item span {
+    font-weight: bold;
+    color: #0b3224;
+}
+
+.instruction-text{
+    color: #A6446A
+}
+
+.ending{
+    margin-top: 500px;
+    padding: 400px;
+}
+
+/* Дополнительные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .instruction {
+        flex-direction: column;
+        gap: 35px;
+    }
+}
