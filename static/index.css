@@ -5,14 +5,14 @@ body {
     font-weight: 700; /* Жирное начертание шрифта */
     overflow-x: hidden; /* Prevent horizontal scrolling */
     transition: background-color 0.3s ease;
-    background: url("https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/w-qjCHPZbeXCQ-unsplash.jpg") no-repeat center center fixed;
+    background: url("/static/figures/background.jpeg") no-repeat center center fixed;
     background-size: cover; /* Cover the entire viewport */
     height: 100vh; /* Full viewport height */
     width: 100vw; /* Ограничиваем ширину экрана */
 }
 
 .dimmed {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/w-qjCHPZbeXCQ-unsplash.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/figures/background.jpeg");
     transition: background-color 0.3s ease;
     pointer-events: none; /* Модальные окна не блокируют события */
 }
@@ -25,14 +25,13 @@ body {
 .timeline {
     position: relative;
     width: 100%; /* Full width */
-    height: 600%; /* Full height */
+    height: 60vh; /* Full height */
     padding: 50px 0;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    top: 50;
     left: 50%;
     transform: translateX(-50%);
     width: 4px;
@@ -43,7 +42,6 @@ body {
 
 .timeline-item {
     position: relative;
-    margin: 50px 0; /* Spacing between items */
 }
 
 .timeline-point {
@@ -51,11 +49,11 @@ body {
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%);
-    width: 30px;
-    height: 30px;
+    width: 1.5vw;
+    height: 1.5vw;
     background: #ffffff;
     border-radius: 50%;
-    border: 6px solid #A6446A;
+    border: 0.3vw solid #A6446A;
     cursor: pointer;
     transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
     z-index: 1; /* Ensure above the line */
@@ -64,21 +62,19 @@ body {
 
 /* Плавное увеличение */
 .timeline-point:hover {
-    transform: translate(-50%, -50%) scale(1.2); /* Плавное увеличение */
-    width: 36px;  /* Увеличиваем размер кнопки */
-    height: 36px; /* Увеличиваем размер кнопки */
+    width: 1.8vw;  /* Увеличиваем размер кнопки */
+    height: 1.8vw; /* Увеличиваем размер кнопки */
 }
 
 /* Чтобы область кнопки была больше */
 .timeline-item:hover .timeline-point {
-    transform: translate(-50%, -50%) scale(1.2);
-    width: 36px;
-    height: 36px;
+    width: 2.1vw;
+    height: 2.1vw;
 }
 
 .modal {
     position: absolute;
-    width: 250px;
+    width: 15vw;
     height: auto;
     background: #ffffff;
     border-radius: 10px;
@@ -95,177 +91,175 @@ body {
 
 .foot {
   position: absolute;
-  width: 15px;
+  width: 1vw;
   transform-origin: center center;
   pointer-events: none;
 }
 
 .steps {
-  height: 500px;
+  height: 54vh;
 }
 
 .year {
-    width: 80px; /* Set the width */
-    height: 80px; /* Set the height */
+    width: 5.2vw; /* Set the width */
+    height: 5.2vw; /* Set the height */
     float: left;
-    margin-left: 70px;
+    margin-left: 4vw;
 }
 
 .jvcr {
-    width: 120px; /* Set the width */
-    height: 120px; /* Set the height */
+    width: 7vw; /* Set the width */
+    height: 7vw; /* Set the height */
     float: left;
-    margin-left: 550px;
+    margin-left: 33vw;
 }
 
 .river {
-    width: 870px; /* Set the width */
-    height: 100px; /* Set the height */
+    width: 51vw; /* Set the width */
+    height: 10vh; /* Set the height */
     float: right;
     margin-right: 0px;
 }
 
 .guys {
-    width: 400px; /* Set the width */
-    height: 400px; /* Set the height */
+    width: 24vw; /* Set the width */
+    height: 24vw; /* Set the height */
     float: left;
 }
 
 .guys-intercept {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 500px;
+    margin-left: 27.5vw;
 }
 
-
-
 .work {
-    width: 80px; /* Set the width */
-    height: 80px; /* Set the height */
+    width: 5.5vw; /* Set the width */
+    height: 5.5vw; /* Set the height */
     float: left;
-    margin-left: 550px;
+    margin-left: 32vw;
 }
 
 .departure {
-    width: 120px; /* Set the width */
-    height: 120px; /* Set the height */
+    width: 7vw; /* Set the width */
+    height: 7vw; /* Set the height */
     float: left;
-    margin-left: 1050px;
+    margin-left: 63vw;
 }
 
 .msk {
-    width: 120px; /* Set the width */
-    height: 120px; /* Set the height */
-    float: left;
-    margin-left: 900px;
+    width: 7vw; /* Set the width */
+    height: 7vw; /* Set the height */
+    float: right;
+    margin-right: 20vw;
 }
 
 .empowerment {
-    width: 120px; /* Set the width */
-    height: 120px; /* Set the height */
+    width: 7vw; /* Set the width */
+    height: 7vw; /* Set the height */
     float: right;
-    margin-right: 400px;
+    margin-right: 24vw;
 }
 
 .rich {
-    width: 200px; /* Set the width */
-    height: 200px; /* Set the height */
+    width: 12vw; /* Set the width */
+    height: 12vw; /* Set the height */
     float: right;
-    margin-right: 300px;
+    margin-right: 18vw;
 }
 
 .sun {
-    width: 150px; /* Set the width */
-    height: 150px; /* Set the height */
+    width: 9vw; /* Set the width */
+    height: 9vw; /* Set the height */
     float: right;
-    margin-right: 100px;
+    margin-right: 6vw;
 }
 
 .dance {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 580px;
+    margin-left: 32.5vw;
 }
 
 .snowboard {
-    width: 120px; /* Set the width */
-    height: 120px; /* Set the height */
+    width: 7vw; /* Set the width */
+    height: 7vw; /* Set the height */
     float: left;
-    margin-left: 200px;
+    margin-left: 12vw;
 }
 
 .happy {
-    width: 150px; /* Set the width */
-    height: 150px; /* Set the height */
+    width: 8vw; /* Set the width */
+    height: 8vw; /* Set the height */
     float: left;
-    margin-left: 300px;
+    margin-left: 18vw;
 }
 
 .happy-b {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 450px;
+    margin-left: 25vw;
 }
 
 .peace {
-    width: 120px; /* Set the width */
-    height: 120px; /* Set the height */
+    width: 7vw; /* Set the width */
+    height: 7vw; /* Set the height */
     float: left;
-    margin-left: 450px;
+    margin-left: 27vw;
 }
 
 .halloween {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 330px;
+    margin-left: 17vw;
 }
 
 
 .police-car {
-    height: 120px; /* Set the height */
+    height: 12vh; /* Set the height */
     float: right; /* This can be removed if you're using positioning */
-    margin-right: 500px;
+    margin-right: 30vw;
     z-index: 2; /* Keep the high z-index value */
     position: relative; /* Ensure it has a position for z-index to work */
 }
 
 .wheels {
-    width: 300px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 18vw; /* Set the width */
+    height: 6vh; /* Set the height */
     float: right; /* This can be removed if you're using positioning */
-    margin-right: -360px;
-    margin-top: 70px;
+    margin-right: -21vw;
+    margin-top: 7vh;
     position: relative; /* Ensure it has a position for z-index to work */
     z-index: 1; /* Lower z-index than .police-car */
 }
 
 
 .arrow {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: center;
-    margin-left: -35px;
-    margin-top: -20px; /* Adjust this value as needed */
+    margin-left: -2vw;
+    margin-top: -2vh; /* Adjust this value as needed */
 }
 
 .neanderthal {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 230px;
-    margin-top: -90px; /* Adjust this value as needed */
+    margin-left: 13.5vw;
+    margin-top: -9vh; /* Adjust this value as needed */
 }
 
 .astronaut {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 720px;
-    margin-top: -90px; /* Adjust this value to align the neanderthal image */
+    margin-left: 42vw;
+    margin-top: -9vh; /* Adjust this value to align the neanderthal image */
 }
 
 .icons {
@@ -273,17 +267,17 @@ body {
 }
 
 .icon {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 900px;
+    margin-left: 51.5vw;
 }
 
 .icon-intercept {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 750px;
+    margin-left: 42.5vw;
 }
 
 #tracks {
@@ -342,8 +336,8 @@ body {
 .modal-content {
     background: #f991b6;
     color: black;
-    width: 60%;
-    height: 52%;
+    width: 60vw;
+    height: 52vh;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -352,12 +346,13 @@ body {
 
 .modal-content h1 {
     color: black;
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2em;
+    margin-bottom: 2vh;
 }
 
 .modal-content h3 {
     color: black;
+    font-size: 1em;
 }
 
 .modal-content p {
@@ -372,8 +367,8 @@ body {
     background-color: black;
     color: white;
     border: none;
-    margin: 10px 460px;
-    padding: 10px 20px;
+    margin: 0.9vh 27vw;
+    padding: 0.9vh 1.2vw;
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
@@ -388,31 +383,31 @@ body {
 .demo-container {
     margin: 10px auto;
     position: relative;
-    width: 200px;
-    height: 100px;
+    width: 12vw;
+    height: 11vh;
 }
 .demo-timeline {
     position: relative;
     background: black;
     top: 50%;
     left: 0%;
-    width: 200%;
-    height: 4px;
-    margin: 0px -120px;
+    width: 24vw;
+    height: 0.3vw;
+    margin: 0px -7vw;
 }
 .demo-item {
     position: absolute;
-    top: -12px;
+    top: -1.2vh;
 }
 
 .demo-point {
-    width: 20px;
-    height: 20px;
+    width: 1.2vw;
+    height: 2.1vh;
     background: white;
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.3s ease;
-    border: 6px solid #A6446A;
+    border: 0.3vw solid #A6446A;
     pointer-events: all; /* Ensure the button can still be interacted with */
 }
 .demo-point:hover {
@@ -443,20 +438,21 @@ strong{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 30px 0; /* Центрируем блок по горизонтали */
+    margin: 2vw 0; /* Центрируем блок по горизонтали */
     padding: 5px 0px 10px 10px;
     text-align: justify;
-    width: 1000px; /* Занимаем всю ширину родительского контейнера */
+    width: 60vw; /* Занимаем всю ширину родительского контейнера */
+    height: 8vh; /* Занимаем всю ширину родительского контейнера */
     box-sizing: border-box; /* Учитываем padding в ширине */
 }
 
 .instruction-item {
-    max-width: 200px; /* Лимит максимальной ширины */
+    max-width: 12vw; /* Лимит максимальной ширины */
     padding: 10px 20px;
     background-color: white;
     border: 1px solid #A6446A;
     border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 6px rgbz(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -484,6 +480,11 @@ strong{
 .ending{
     margin-top: 500px;
     padding: 400px;
+}
+
+/* Размытие для изображений sensitive */
+.sensitive-content {
+    filter: blur(20px);
 }
 
 /* Дополнительные стили для мобильных устройств */

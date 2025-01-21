@@ -141,31 +141,31 @@ const paths = [
     850.00, 490.00, 83.434
   ],
   [
-    1000.00, 2700.00, -15.00,
-    1030.00, 2800.00, -15.00,
-    1050.00, 2820.00, -35.00,
-    1080.00, 2870.00, -55.00,
-    1100.00, 2900.00, -75.00,
-    1500.00, 3000.00, -75.00
+    1000.00, 2400.0, -15.00,
+    1030.00, 2500.0, -15.00,
+    1050.00, 2520.0, -35.00,
+    1080.00, 2570.0, -55.00,
+    1100.00, 2600.0, -75.00,
+    1500.00, 2700.0, -75.00
   ],
   [
-    1000.00, 5700.00, -75.00,
-    1400.00, 5770.00, -45.00,
-    1420.00, 5800.00, -30.00,
-    1440.00, 5830.00, 0.00,
-    1460.00, 5860.00, 30.00,
-    1440.00, 5890.00, 60.00,
-    1420.00, 5920.00, 75.00,
-    1420.00, 5920.00, 75.00,
-    1100.00, 5980.00, 90.00,
-    1050.00, 5960.00, 125.00,
-    1030.00, 5940.00, 150.00,
-    1030.00, 5920.00, 180.00,
-    1030.00, 5850.00, 230.00,
-    1030.00, 5800.00, 270.00,
-    1150.00,  5730.00, -80.00,
-    1200.00,  5770.00, -70.00,
-    1400.00, 5800.00, -50.00,
+    1000.00, 5050.0, -75.00,
+    1400.00, 5120.0, -45.00,
+    1420.00, 5150.0, -30.00,
+    1440.00, 5180.0, 0.00,
+    1460.00, 5210.0, 30.00,
+    1440.00, 5240.0, 60.00,
+    1420.00, 5270.0, 75.00,
+    1420.00, 5270.0, 75.00,
+    1100.00, 5330.0, 90.00,
+    1050.00, 5310.0, 125.00,
+    1030.00, 5290.0, 150.00,
+    1030.00, 5270.0, 180.00,
+    1030.00, 5200.0, 230.00,
+    1030.00, 5150.0, 270.00,
+    1150.00, 5080.0, -80.00,
+    1200.00, 5120.0, -70.00,
+    1400.00, 5150.0, -50.00,
   ]
 ];
 
@@ -208,7 +208,7 @@ function getPerpendicularOffset(angle, footOffset) {
 function createFootprint(x, y, angle, isLeftFoot, container) {
   const footprint = document.createElement('div');
   footprint.className = isLeftFoot ? 'footprint left' : 'footprint right';
-  footprint.style.transform = `translate(${x}px, ${y}px) rotate(${angle}deg)`;
+  footprint.style.transform = `translate(${x*0.000578}vw, ${y*0.0011}vh) rotate(${angle}deg)`;
   container.appendChild(footprint);
 }
 
@@ -270,9 +270,8 @@ function drawStep(animation) {
 
   // Добавляем след
   createFootprint(animation.pos.x + offsetX, animation.pos.y + offsetY, animation.pos.angle, isLeftFoot, trackContainer);
-
   // Анимируем ногу
-  currentFoot.style.transform = `translate(${animation.pos.x + offsetX}px, ${animation.pos.y + offsetY}px) rotate(${animation.pos.angle}deg)`;
+  currentFoot.style.transform = `translate(${(animation.pos.x + offsetX)*0.0578}vw, ${(animation.pos.y + offsetY)*0.11}vh) rotate(${animation.pos.angle}deg)`;
   currentFoot.style.opacity = "1";
 
   // Увеличиваем счетчик шагов
