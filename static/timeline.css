@@ -25,25 +25,23 @@ body {
 .timeline {
     position: relative;
     width: 100%; /* Full width */
-    height: 600%; /* Full height */
+    height: 60vh; /* Full height */
     padding: 50px 0;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    top: 50;
     left: 50%;
     transform: translateX(-50%);
     width: 4px;
-    height: 100%;
+    height: 537vh;
     background: #ffffff;
     z-index: 0;
 }
 
 .timeline-item {
     position: relative;
-    margin: 50px 0; /* Spacing between items */
 }
 
 .timeline-point {
@@ -51,11 +49,11 @@ body {
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%);
-    width: 30px;
-    height: 30px;
+    width: 1.5vw;
+    height: 1.5vw;
     background: #ffffff;
     border-radius: 50%;
-    border: 6px solid #A6446A;
+    border: 0.3vw solid #A6446A;
     cursor: pointer;
     transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
     z-index: 1; /* Ensure above the line */
@@ -64,16 +62,14 @@ body {
 
 /* Плавное увеличение */
 .timeline-point:hover {
-    transform: translate(-50%, -50%) scale(1.2); /* Плавное увеличение */
-    width: 36px;  /* Увеличиваем размер кнопки */
-    height: 36px; /* Увеличиваем размер кнопки */
+    width: 1.8vw;  /* Увеличиваем размер кнопки */
+    height: 1.8vw; /* Увеличиваем размер кнопки */
 }
 
 /* Чтобы область кнопки была больше */
 .timeline-item:hover .timeline-point {
-    transform: translate(-50%, -50%) scale(1.2);
-    width: 36px;
-    height: 36px;
+    width: 2.1vw;
+    height: 2.1vw;
 }
 
 .modal {
@@ -101,171 +97,169 @@ body {
 }
 
 .steps {
-  height: 500px;
+  height: 54vh;
 }
 
 .year {
-    width: 80px; /* Set the width */
-    height: 80px; /* Set the height */
+    width: 5.2vw; /* Set the width */
+    height: 5.2vw; /* Set the height */
     float: left;
-    margin-left: 70px;
+    margin-left: 4vw;
 }
 
 .jvcr {
-    width: 120px; /* Set the width */
-    height: 120px; /* Set the height */
+    width: 7vw; /* Set the width */
+    height: 7vw; /* Set the height */
     float: left;
-    margin-left: 550px;
+    margin-left: 33vw;
 }
 
 .river {
-    width: 870px; /* Set the width */
-    height: 100px; /* Set the height */
+    width: 51vw; /* Set the width */
+    height: 10vh; /* Set the height */
     float: right;
     margin-right: 0px;
 }
 
 .guys {
-    width: 400px; /* Set the width */
-    height: 400px; /* Set the height */
+    width: 24vw; /* Set the width */
+    height: 24vw; /* Set the height */
     float: left;
 }
 
 .guys-intercept {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 500px;
+    margin-left: 27.5vw;
 }
 
-
-
 .work {
-    width: 80px; /* Set the width */
-    height: 80px; /* Set the height */
+    width: 5.5vw; /* Set the width */
+    height: 5.5vw; /* Set the height */
     float: left;
-    margin-left: 550px;
+    margin-left: 32vw;
 }
 
 .departure {
-    width: 120px; /* Set the width */
-    height: 120px; /* Set the height */
+    width: 7vw; /* Set the width */
+    height: 7vw; /* Set the height */
     float: left;
-    margin-left: 1050px;
+    margin-left: 63vw;
 }
 
 .msk {
-    width: 120px; /* Set the width */
-    height: 120px; /* Set the height */
-    float: left;
-    margin-left: 900px;
+    width: 7vw; /* Set the width */
+    height: 7vw; /* Set the height */
+    float: right;
+    margin-right: 20vw;
 }
 
 .empowerment {
-    width: 120px; /* Set the width */
-    height: 120px; /* Set the height */
+    width: 7vw; /* Set the width */
+    height: 7vw; /* Set the height */
     float: right;
-    margin-right: 400px;
+    margin-right: 24vw;
 }
 
 .rich {
-    width: 200px; /* Set the width */
-    height: 200px; /* Set the height */
+    width: 12vw; /* Set the width */
+    height: 12vw; /* Set the height */
     float: right;
-    margin-right: 300px;
+    margin-right: 18vw;
 }
 
 .sun {
-    width: 150px; /* Set the width */
-    height: 150px; /* Set the height */
+    width: 9vw; /* Set the width */
+    height: 9vw; /* Set the height */
     float: right;
-    margin-right: 100px;
+    margin-right: 6vw;
 }
 
 .dance {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 580px;
+    margin-left: 32.5vw;
 }
 
 .snowboard {
-    width: 120px; /* Set the width */
-    height: 120px; /* Set the height */
+    width: 7vw; /* Set the width */
+    height: 7vw; /* Set the height */
     float: left;
-    margin-left: 200px;
+    margin-left: 12vw;
 }
 
 .happy {
-    width: 150px; /* Set the width */
-    height: 150px; /* Set the height */
+    width: 8vw; /* Set the width */
+    height: 8vw; /* Set the height */
     float: left;
-    margin-left: 300px;
+    margin-left: 18vw;
 }
 
 .happy-b {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 450px;
+    margin-left: 25vw;
 }
 
 .peace {
-    width: 120px; /* Set the width */
-    height: 120px; /* Set the height */
+    width: 7vw; /* Set the width */
+    height: 7vw; /* Set the height */
     float: left;
-    margin-left: 450px;
+    margin-left: 27vw;
 }
 
 .halloween {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 330px;
+    margin-left: 17vw;
 }
 
 
 .police-car {
-    height: 120px; /* Set the height */
+    height: 12vh; /* Set the height */
     float: right; /* This can be removed if you're using positioning */
-    margin-right: 500px;
+    margin-right: 30vw;
     z-index: 2; /* Keep the high z-index value */
     position: relative; /* Ensure it has a position for z-index to work */
 }
 
 .wheels {
-    width: 300px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 18vw; /* Set the width */
+    height: 6vh; /* Set the height */
     float: right; /* This can be removed if you're using positioning */
-    margin-right: -360px;
-    margin-top: 70px;
+    margin-right: -21vw;
+    margin-top: 7vh;
     position: relative; /* Ensure it has a position for z-index to work */
     z-index: 1; /* Lower z-index than .police-car */
 }
 
 
 .arrow {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: center;
-    margin-left: -35px;
-    margin-top: -20px; /* Adjust this value as needed */
+    margin-left: -2vw;
+    margin-top: -2vh; /* Adjust this value as needed */
 }
 
 .neanderthal {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 230px;
-    margin-top: -90px; /* Adjust this value as needed */
+    margin-left: 13.5vw;
+    margin-top: -9vh; /* Adjust this value as needed */
 }
 
 .astronaut {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 720px;
-    margin-top: -90px; /* Adjust this value to align the neanderthal image */
+    margin-left: 42vw;
+    margin-top: -9vh; /* Adjust this value to align the neanderthal image */
 }
 
 .icons {
@@ -273,17 +267,17 @@ body {
 }
 
 .icon {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 900px;
+    margin-left: 51.5vw;
 }
 
 .icon-intercept {
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height */
+    width: 3vw; /* Set the width */
+    height: 3vw; /* Set the height */
     float: left;
-    margin-left: 750px;
+    margin-left: 42.5vw;
 }
 
 #tracks {

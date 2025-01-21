@@ -74,3 +74,9 @@ async def get_cached_file(file_name: str):
         return FileResponse(file_path)
     else:
         return Response(content="File not found", status_code=404)
+
+@app.get('/cache')
+def get_cached_file():
+    print(type(CACHE), CACHE.keys())
+    return {'a' : 'b'}
+

@@ -38,7 +38,7 @@ function generateRandomPosition(existingPositions, centerX, centerY, maxWidth, m
 timelineItems.forEach((item, index) => {
     const point = item.querySelector('.timeline-point');
 
-    item.style.marginTop = `${index * 150}px`;
+    item.style.marginTop = `${index * 14.5}vh`;
     
     let isModalPinned = false; // Tracks if modals are pinned (clicked)
     // Создаем элемент для отображения title
